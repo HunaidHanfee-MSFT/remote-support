@@ -1,4 +1,4 @@
-﻿// <copyright file="SearchHelper.cs" company="Microsoft">
+// <copyright file="SearchHelper.cs" company="Microsoft">
 // Copyright (c) Microsoft. All rights reserved.
 // </copyright>
 
@@ -144,10 +144,10 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
                 {
                     var dynamicElements = new List<AdaptiveElement>
                     {
-                        CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("RequestNumberText"), $"#{ticket.TicketId}"),
-                        CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("TitleDisplayText"), ticket.Title),
-                        CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("DescriptionText"), ticket.Description),
-                        CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("CreatedOnText"), ticket.CreatedOn.ToString(CultureInfo.InvariantCulture)),
+                        CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("RequestNumberText"), $"#{ticket.TicketId}", localizer),
+                        CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("TitleDisplayText"), ticket.Title, localizer),
+                        CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("DescriptionText"), ticket.Description, localizer),
+                        CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("CreatedOnText"), ticket.CreatedOn.ToString(CultureInfo.InvariantCulture), localizer),
                     };
 
                     AdaptiveCard commandIdCard = new AdaptiveCard(Constants.AdaptiveCardVersion)
